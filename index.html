@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142d42">
+  <title>Daily Routine — Gym & UTBK</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="eyebrow">MY DAILY ROUTINE</p>
+      <h1>Gym <span>+</span> UTBK</h1>
+      <p class="sub">Target UTBK 880 · Konsisten setiap hari</p>
+    </div>
+    <div class="date" id="today"></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-label">SEKARANG</div>
+      <div class="clock" id="clock">--:--:--</div>
+      <div id="nextTask" class="next">Memuat jadwal…</div>
+      <div class="progress-wrap">
+        <div class="progress-meta"><span>Progres hari ini</span><strong id="progressText">0%</strong></div>
+        <div class="track"><div id="progressBar"></div></div>
+      </div>
+    </section>
+
+    <section class="panel reminder-panel">
+      <div>
+        <h2>Pengingat</h2>
+        <p id="pushStatus">Aktifkan notifikasi agar pengingat bisa dikirim saat aplikasi ditutup.</p>
+      </div>
+      <button id="enablePush" class="primary">Aktifkan notifikasi</button>
+      <p class="small-note">Memerlukan izin notifikasi, koneksi internet, dan aplikasi diakses melalui HTTPS. Alarm/getar bergantung pada pengaturan Android.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div><h2>Jadwal hari ini</h2><p>Centang aktivitas setelah selesai.</p></div>
+        <button id="resetDay" class="ghost">Reset checklist</button>
+      </div>
+      <div id="schedule" class="schedule"></div>
+    </section>
+
+    <section class="panel settings">
+      <h2>Pengaturan</h2>
+      <label for="asharTime">Waktu mulai sesi PK (setelah Ashar)</label>
+      <div class="setting-row">
+        <input id="asharTime" type="time" value="15:15">
+        <button id="saveAshar" class="secondary">Simpan</button>
+      </div>
+      <p class="small-note">Ubah sesuai waktu Ashar di lokasimu. Sesi PK akan dimulai pada jam ini dan berakhir pukul 17.30.</p>
+      <label class="toggle"><input id="soundToggle" type="checkbox" checked> Suara alarm saat notifikasi diterima (jika diizinkan perangkat)</label>
+      <label class="toggle"><input id="vibrateToggle" type="checkbox" checked> Getar saat notifikasi diterima (jika didukung perangkat)</label>
+    </section>
+
+    <section class="panel tips">
+      <h2>Catatan target</h2>
+      <div class="targets">
+        <div><strong>30</strong><span>soal PU</span></div>
+        <div><strong>25</strong><span>soal PK</span></div>
+        <div><strong>25</strong><span>soal PM</span></div>
+      </div>
+      <p>Utamakan memahami kesalahan, bukan sekadar mengejar jumlah soal.</p>
+    </section>
+  </main>
+  <footer>Daily Routine · Data checklist tersimpan di perangkat ini.</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
