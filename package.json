@@ -1,0 +1,13 @@
+{
+  "name": "gym-utbk-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "vapid": "web-push generate-vapid-keys"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "web-push": "^3.6.7"
+  }
+}
